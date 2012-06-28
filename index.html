@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>phonegap & jquery mobile starter</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+
+  <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.theme.css" />
+  
+  <script>
+    var userAgent = navigator.userAgent + '';
+    if (userAgent.indexOf('iPhone') > -1) {
+      document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
+      var mobile_system = 'iphone';
+    } else if (userAgent.indexOf('Android') > -1) {
+      document.write('<script src="js/lib/cordova-android.js"></sc' + 'ript>');
+      var mobile_system = 'android';
+    } else {
+      var mobile_system = '';
+    }
+  </script>
+  
+  <script src="js/lib/jquery.js"></script>
+  <!-- your scripts here -->
+  <script src="js/app/app.js"></script>
+  <script src="js/app/bootstrap.js"></script>
+  <script src="js/lib/jquery.mobile.js"></script>
+  
+  </head>
+  <body>
+    
+    <div data-role="page">
+
+		<div data-role="header">
+			<h1>jQuery Mobile Boilerplate 1.1</h1>
+		</div>
+
+		<div data-role="content">
+		
+			<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
+				<li data-role="list-divider">Snippet Pages</li>
+				<li><a href="snippets/buttons.html">Buttons</a></li>
+				<li><a href="snippets/grids.html">Grids</a></li>
+				<li><a href="snippets/collapsibles.html">Collapsible Boxes</a></li>
+				<li><a href="snippets/collapsible-sets.html">Collapsible Sets</a></li>
+				<li><a href="snippets/forms.html">Form Elements</a></li>
+				<li><a href="snippets/lists.html">List Views</a></li>
+			</ul>
+
+		</div>
+		
+		<div data-role="footer" data-theme="c">
+			<p>&copy; 2012 - jQuery Mobile Boilerplate</p>
+		</div>	
+
+
+    </div><!-- /page -->
+    
+  </body>
+</html>
